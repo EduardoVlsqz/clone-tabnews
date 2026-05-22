@@ -7,7 +7,7 @@ const redis = new Redis({
 
 export default async function handler(req, res) {
   if (req.method === "GET") {
-    const count = await redis.get("vamo_dale") || 0;
+    const count = (await redis.get("vamo_dale")) || 0;
     return res.json({ count });
   }
 
@@ -20,4 +20,3 @@ export default async function handler(req, res) {
 
   res.status(405).end();
 }
-

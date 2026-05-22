@@ -6,6 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "next dev",
+    "lint:check": "prettier --check .",
+    "lint:fix": "prettier --write .",
     "build": "next build",
     "vercel-build": "next build"
   },
@@ -15,5 +17,8 @@
     "@upstash/redis": "^1.38.0",
     "next": "^13.1.6",
     "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "prettier": "^3.8.3"
   }
 }
